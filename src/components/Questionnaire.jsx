@@ -1,5 +1,7 @@
 import { useReducer } from "react";
 import questions from "../data/questions";
+import './Questionnaire.scss';
+
 
 const initialState = {
     scores: {
@@ -54,7 +56,7 @@ function Questionnaire() {
     
 
     return (
-        <>
+        <div className="questionnaire">
             {state.isCompleted ? (
                 <>
                     <h3>Based on you answers, we'd recommend { /^[aeiou]/i.test(bestCamera) ? 'an' : 'a' } {bestCamera} camera</h3>
@@ -70,7 +72,7 @@ function Questionnaire() {
                 <>
                     <h3>Question {currentQuestionIndex + 1}</h3>
                     <h3>{currentQuestion.question}</h3>
-                    <div>
+                    <div className="options">
                         {currentQuestion.options.map((option, index) => (
                             <button 
                                 key={index}
@@ -90,7 +92,7 @@ function Questionnaire() {
                     </div>
                 </>
             )}
-        </>
+        </div>
     )
 }
 
