@@ -56,42 +56,45 @@ function Questionnaire() {
     
 
     return (
-        <div className="questionnaire">
-            {state.isCompleted ? (
-                <>
-                    <h3>Based on you answers, we'd recommend { /^[aeiou]/i.test(bestCamera) ? 'an' : 'a' } {bestCamera} camera</h3>
-                    <button
-                        onClick={() => {
-                            dispatch({type: 'RESET'})
-                        }}
-                    >
-                        Reset Quiz
-                    </button>
-                </>
-            ) : (
-                <>
-                    <h3>Question {currentQuestionIndex + 1}</h3>
-                    <h3>{currentQuestion.question}</h3>
-                    <div className="options">
-                        {currentQuestion.options.map((option, index) => (
-                            <button 
-                                key={index}
-                                onClick={() => {
-                                    dispatch({
-                                        type: 'ANSWER',
-                                        payload: {
-                                            scores: option.scores,
-                                            totalQuestions: questions.length
-                                        }
-                                    });
-                                }}
-                            >
-                                {option.text}
-                            </button>
-                        ))}
-                    </div>
-                </>
-            )}
+        <div className="questionnaire-container">
+            <div className="questionnaire">
+                {state.isCompleted ? (
+                    <>
+                        <h3>Based on you answers, we'd recommend { /^[aeiou]/i.test(bestCamera) ? 'an' : 'a' }...</h3> 
+                        <h3><strong>{bestCamera} Camera</strong></h3>
+                        <button className="reset-button"
+                            onClick={() => {
+                                dispatch({type: 'RESET'})
+                            }}
+                        >
+                            Reset Quiz
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <h2>Question {currentQuestionIndex + 1}</h2>
+                        <h3>{currentQuestion.question}</h3>
+                        <div className="options">
+                            {currentQuestion.options.map((option, index) => (
+                                <button 
+                                    key={index}
+                                    onClick={() => {
+                                        dispatch({
+                                            type: 'ANSWER',
+                                            payload: {
+                                                scores: option.scores,
+                                                totalQuestions: questions.length
+                                            }
+                                        });
+                                    }}
+                                >
+                                    {option.text}
+                                </button>
+                            ))}
+                        </div>
+                    </>
+                )}
+            </div>
         </div>
     )
 }
