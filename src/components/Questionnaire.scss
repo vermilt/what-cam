@@ -10,7 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa; // optional soft background
+  background-color: #f8f9fa; 
   padding: 1rem;
 }
 
@@ -54,28 +54,35 @@
         }
       }
     }
-  }
 
-  .reset-button {
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 0, 107);
-    background-clip: padding-box;
-    border: 1px solid rgb(255, 0, 107);
-    border-radius: 4.8rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center; // ✅ center text horizontally
-    align-items: center;     // ✅ center text vertically
-    min-width: 30%;
-    font-size: 100%;
-    font-weight: bold;
-    height: 4rem;
-    transition: background-color 150ms linear;
-  
-    &:hover {
-      background: rgb(255, 0, 107);
-      color: white;
+    .reset-button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .reset-button {
+      background-color: rgb(255, 255, 255);
+      color: rgb(255, 0, 107);
+      background-clip: padding-box;
+      border: 1px solid rgb(255, 0, 107);
+      border-radius: 4.8rem;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      min-width: 30%;
+      font-size: 100%;
+      font-weight: bold;
+      height: 4rem;
+      transition: background-color 150ms linear;
+    
+      &:hover {
+        background: rgb(255, 0, 107);
+        color: white;
+      }
     }
   }
+
+  
   
   

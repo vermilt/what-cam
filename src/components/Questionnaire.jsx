@@ -59,9 +59,10 @@ function Questionnaire() {
         <div className="questionnaire-container">
             <div className="questionnaire">
                 {state.isCompleted ? (
-                    <>
+                    <div>
                         <h3>Based on you answers, we'd recommend { /^[aeiou]/i.test(bestCamera) ? 'an' : 'a' }...</h3> 
                         <h3><strong>{bestCamera} Camera</strong></h3>
+                        <div className="reset-button-container">
                         <button className="reset-button"
                             onClick={() => {
                                 dispatch({type: 'RESET'})
@@ -69,7 +70,8 @@ function Questionnaire() {
                         >
                             Reset Quiz
                         </button>
-                    </>
+                        </div>
+                    </div>
                 ) : (
                     <>
                         <h2>Question {currentQuestionIndex + 1}</h2>
