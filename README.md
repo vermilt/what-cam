@@ -1,12 +1,26 @@
-# React + Vite
+# What Cam?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**What Cam** is an interactive React questionnaire app that recommends the best type of camera for you based on your preferences and needs.
 
-Currently, two official plugins are available:
+1. Users answer a series of questions about their budget and photography preferences.
+2. Each answer adds points to one or more camera categories.
+3. At the end, the highest scoring camera type is recommended.
+4. Users can then reset the quiz to try again.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+GitHub: [github.com/vermilt/what-cam]
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Questionnaire built with React and useReducer
+- Styled with SCSS and custom button components
+- Responsive layout with a centered design
+- Reset functionality to retake the quiz
+
+## Technologies Used
+
+- React (setup using Vite )
+- JavaScript
+- SCSS
+- Git & GitHub for version control
