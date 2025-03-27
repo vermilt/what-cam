@@ -20,7 +20,7 @@ const questions = [
     },
     {
       id: "compact",
-      question: "Do you prefer a compact camera?",
+      question: "Do you prefer a lightweight camera?",
       options: [
         { text: "Yes", scores: { DSLR: 3, Mirrorless: 8, Compact: 10, Action: 9 } },
         { text: "No", scores: { DSLR: 10, Mirrorless: 9, Compact: 3, Action: 5 } }
