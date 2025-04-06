@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import questions from "../data/questions";
 import './Questionnaire.scss';
 
+// initialState to store scores
 
 const initialState = {
     scores: {
@@ -26,8 +27,8 @@ function scoreReducer(state, action) {
                     Compact: state.scores.Compact + (action.payload.scores.Compact || 0),
                     Action: state.scores.Action + (action.payload.scores.Action || 0),
                 },
-                currentQuestion: nextQuestion,
-                isCompleted: nextQuestion >= action.payload.totalQuestions // Check if all questions are answered
+                currentQuestion: nextQuestion, 
+                isCompleted: nextQuestion >= action.payload.totalQuestions // checks if all questions are answered
             };
 
         case "RESET":
@@ -80,7 +81,9 @@ function Questionnaire() {
                             {currentQuestion.options.map((option, index) => (
                                 <button 
                                     key={index}
-                                    onClick={() => {
+                                    onClick={(e) => {
+                                        e.currentTarget.blur();
+
                                         dispatch({
                                             type: 'ANSWER',
                                             payload: {

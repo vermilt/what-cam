@@ -73,10 +73,18 @@
         transition-timing-function: linear;
         transition-duration: 150ms;
   
-        &:hover {
+        &:active {
           background: rgb(255, 0, 107);
           color: white
         }
+      }
+    }
+
+    @media (pointer: fine) {
+      button:hover {
+        background: rgb(255, 0, 107);
+        color: white;
+        cursor: pointer;
       }
     }
 
@@ -104,6 +112,12 @@
       &:hover {
         background: rgb(255, 0, 107);
         color: white;
+        
+      }
+
+      &:active {
+        background: rgb(255, 0, 107);
+        color: white
       }
     }
   }
